@@ -1,4 +1,4 @@
-package Deeplearning.mestrado;
+﻿package Deeplearning.mestrado;
 
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.GradientNormalization;
@@ -20,8 +20,9 @@ import org.nd4j.linalg.lossfunctions.LossFunctions;
 public class DefaultNetworks {
 	
 	/* 
-	 * Aqui a gente insere um texto explicando a configuração de cada rede e o motivo dos parametros
-	 * Pode ser em portugues mas envite usar acentos pra nao termos problemas com decodificacao de arquivo
+	 * rede com apenas uma camada densa de neuronios
+	 * retirada de um dos exemplos do dl4j
+	 * tem taxa de acertos elevada para pequenas bases de dados
 	 * 
 	 * @param seed
 	 * @param iterations
@@ -65,6 +66,9 @@ public class DefaultNetworks {
     }
 
 	/*
+	 * rede com duas camadas densas de neuronios 
+	 * feita com o auxilio da rede anterior
+	 * 
 	 * @param seed
 	 * @param iterations
 	 * @param learningRate
@@ -113,6 +117,9 @@ public class DefaultNetworks {
     }
 
 	/*
+	 * arquitetura lenet, retirada do exemplo animals da framework
+ 	 * todos os valores dos hyperparametros sao padrao 
+	 *
 	 * @param seed
 	 * @param iterations
 	 * @param learningRate
@@ -153,6 +160,9 @@ public class DefaultNetworks {
     }
     
 	/*
+	 * arquitetura alexnet, retirada do exemplo animals da framework
+ 	 * todos os valores dos hyperparametros sao padrao 
+	 *
 	 * @param seed
 	 * @param iterations
 	 * @param learningRate
