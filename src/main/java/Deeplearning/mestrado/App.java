@@ -58,10 +58,10 @@ public class App {
 	protected static int width;
 	protected static int channels = 1;
 	protected static int outputNum = 2;
-	//modelType available MLP1->1, MLP2->2, LENET->3, ALEXNET->4, SINGLECONV->5, CONVFULLY->6
-	protected static int modelType = 4;
-	protected static int batchSize = 20;
-	protected static int numEpochs = 50;
+	//modelType available MLP1->1, LENET->2, ALEXNET->3, VGG16->4, simpleCNN->5
+	protected static int modelType = 3;
+	protected static int batchSize = 10;//20
+	protected static int numEpochs = 10;//50
 	protected static int iterations = 1;
 	protected static double learningRate = 0.001;
 	
@@ -70,8 +70,10 @@ public class App {
     {
     	BasicConfigurator.configure();
     	//Alterar de acordo com seu diretorio
-    	File trainData = new File("C:\\Users\\ejrza_000\\Downloads\\mestrado\\mestrado\\teste");
-        File testData = new File("C:\\Users\\ejrza_000\\Downloads\\mestrado\\mestrado\\treinamento");
+    	File trainData = new File("C:\\Users\\ejrza_000\\Desktop\\concatenadas28.07\\treinamentoConcatenado");
+        //File trainData = new File("C:\\Users\\ejrza_000\\Downloads\\mestrado\\mestrado\\treinamento");
+        File testData = new File("C:\\Users\\ejrza_000\\Desktop\\concatenadas28.07\\testeConcatenado");
+        //File testData = new File("C:\\Users\\ejrza_000\\Downloads\\mestrado\\mestrado\\teste");
         
         //dimensao de entrada
         height = 100;
@@ -106,22 +108,19 @@ public class App {
         MultiLayerNetwork model;
         switch (modelType) {
             case 1:
-                model = DefaultNetworks.mlp1(seed, iterations, learningRate, height, width, channels, outputNum);
+                model = DefaultNetworks.mlp(seed, iterations, learningRate, height, width, channels, outputNum);
                 break;
             case 2:
-                model = DefaultNetworks.mlp2(seed, iterations, learningRate, height, width, channels, outputNum);
-                break;
-            case 3:
                 model = DefaultNetworks.leNet(seed, iterations, learningRate, height, width, channels, outputNum);
                 break;
-            case 4:
+            case 3:
                 model = DefaultNetworks.alexNet(seed, iterations, learningRate, height, width, channels, outputNum);
                 break;
-            case 5:
-                model = DefaultNetworks.singleConv(seed, iterations, learningRate, height, width, channels, outputNum);
+            case 4:
+                model = DefaultNetworks.VGG16(seed, iterations, learningRate, height, width, channels, outputNum);
                 break;
-            case 6:
-                model = DefaultNetworks.fullyConv(seed, iterations, learningRate, height, width, channels, outputNum);
+            case 5:
+                model = DefaultNetworks.simpleCNN(seed, iterations, learningRate, height, width, channels, outputNum);
                 break;
 
             default:
@@ -137,7 +136,7 @@ public class App {
         model.setListeners(new ScoreIterationListener(2));//was 10
 
         log.info("*****TRAIN MODEL********");
-        for(int i = 0; i<numEpochs; i++){
+        for(int i = 0; i < numEpochs; i++){
             model.fit(dataIter);
         }
 

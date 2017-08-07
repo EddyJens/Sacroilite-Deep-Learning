@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.deeplearning4j:deeplearning4j-nn:0.8.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/0.8.1-SNAPSHOT/deeplearning4j-nn-0.8.1-20170727.155634-500.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/0.8.1-SNAPSHOT/deeplearning4j-nn-0.8.1-20170727.155634-500-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/0.8.1-SNAPSHOT/deeplearning4j-nn-0.8.1-20170727.155634-500-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
