@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.datavec:datavec-api:0.8.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/0.8.1-SNAPSHOT/datavec-api-0.8.1-20170727.154114-505.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/0.8.1-SNAPSHOT/datavec-api-0.8.1-20170727.154114-505-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/0.8.1-SNAPSHOT/datavec-api-0.8.1-20170727.154114-505-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
